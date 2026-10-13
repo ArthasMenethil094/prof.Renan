@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Média de Peso</h1>
+    <p>Insira o peso de 5 pessoas:</p>
+    <input type="number" id="peso1" placeholder="Peso 1">
+    <input type="number" id="peso2" placeholder="Peso 2">
+    <input type="number" id="peso3" placeholder="Peso 3">
+    <input type="number" id="peso4" placeholder="Peso 4">
+    <input type="number" id="peso5" placeholder="Peso 5">
+    <p id="resultado"></p>
+    <button onclick="calcularMedia()">Calcular Média</button>
+</body>
+<script>
+    function calcularMedia() {
+        var peso1 = parseFloat(document.getElementById("peso1").value);
+        var peso2 = parseFloat(document.getElementById("peso2").value);
+        var peso3 = parseFloat(document.getElementById("peso3").value);
+        var peso4 = parseFloat(document.getElementById("peso4").value);
+        var peso5 = parseFloat(document.getElementById("peso5").value);
+        var media = (peso1 + peso2 + peso3 + peso4 + peso5) / 5;
+        document.getElementById("resultado").innerHTML = "Média de Peso: " + media.toFixed(2) + " kg";
+    }
+</script>
+</html>

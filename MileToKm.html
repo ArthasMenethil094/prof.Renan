@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conversor Milha para Quilômetro</h1>
+    <p>Insira a distância em milhas:</p>
+    <input type="number" id="milhas" placeholder="distancia em milhas">
+    <p id="resultado"></p>
+    <button onclick="converter()">Converter</button>
+</body>
+<script>
+    function converter() {
+        var milhas = parseFloat(document.getElementById("milhas").value);
+        var quilometros = milhas * 1.60934;
+        document.getElementById("resultado").innerHTML = "Distância em Quilômetros: " + quilometros.toFixed(2) + " km";
+    }
+</script>
+</html>

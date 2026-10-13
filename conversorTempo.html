@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conversor de Tempo</h1>
+    <input type="number" id="segundos" placeholder="Segundos">
+    <p id="resultado"></p>
+    <button onclick="converter()">Converter</button>
+</body>
+<script>
+    function converter() {
+        var segundos = parseFloat(document.getElementById("segundos").value);
+        var minutos = segundos / 60;
+        var horas = minutos / 60;
+        var segundos = segundos % 60;
+        document.getElementById("resultado").innerHTML = "Minutos: " + minutos.toFixed(2) + " min<br>Horas: " + horas.toFixed(2) + " h<br>Segundos: " + segundos.toFixed(2) + " s";
+    }
+</script>
+</html>

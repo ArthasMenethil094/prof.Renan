@@ -1,0 +1,23 @@
+//Peça uma distância em quilômetros e converta para metros e centímetros.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Conversor de Distância</h1>
+    <input type="number" id="quilometros" placeholder="Quilômetreos">
+    <p id="resultado"></p>
+    <button onclick="converter()">Converter</button>
+</body>
+<script>
+    function converter() {
+        var quilometros = parseFloat(document.getElementById("quilometros").value);
+        var metros = quilometros * 1000;
+        var centimetros = quilometros * 100000;
+        document.getElementById("resultado").innerHTML = "Distância em Metros: " + metros.toFixed(2) + " m<br>Distância em Centímetros: " + centimetros.toFixed(2) + " cm";
+    }
+</script>
+</html>

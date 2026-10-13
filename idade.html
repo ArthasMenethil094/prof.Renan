@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+</head>
+<body>
+   
+    <h1>Idade</h1>
+    <input type="number" id="idade" placeholder="Idade em anos" min="0">
+    <button onclick="mostrarIdade()">Mostrar Idade</button>
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarIdade() {
+            var idade = parseInt(document.getElementById("idade").value);
+            var resultado = document.getElementById("resultado");
+
+            if (isNaN(idade)) {
+                resultado.innerHTML = "Por favor, digite sua idade em anos.";
+                return;
+            }
+
+            var meses = idade * 12;
+            var dias = idade * 365;
+
+            resultado.innerHTML = "Idade em meses: " + meses + "<br>" +
+                                  "Idade em dias: " + dias;
+        }
+    </script>
+</body>
+</html>

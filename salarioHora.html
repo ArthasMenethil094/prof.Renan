@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de Salário</h1>
+    <input type="number" id="salario" placeholder="Salário">
+    <input type="number" id="horas" placeholder="Horas Trabalhadas Mês">
+    <p id="resultado"></p>
+    <button onclick="calcularSalario()">Calcular Salário</button>
+</body>
+<script>
+    function calcularSalario() {
+        var salario = parseFloat(document.getElementById("salario").value);
+        var horas = parseFloat(document.getElementById("horas").value);
+        var resultado = salario * horas;
+        document.getElementById("resultado").innerHTML = "Salário Total: R$ " + resultado.toFixed(2);
+    }
+</script>
+</html>

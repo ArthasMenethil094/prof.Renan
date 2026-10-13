@@ -1,0 +1,25 @@
+//Peça um número inteiro e mostre a tabuada dele (do 0 até o 10).
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <input type="number" id="numero" placeholder="Número">
+    <p id="resultado"></p>
+    <button onclick="mostrarTabuada()">Mostrar Tabuada</button>
+</body>
+<script>
+    function mostrarTabuada() {
+        var numero = parseInt(document.getElementById("numero").value);
+        var resultado = "";
+        for (var i = 0; i <= 10; i++){
+            resultado += numero + " x " + i + " = " + (numero * i) + "<br>";
+        document.getElementById("resultado").innerHTML = resultado;
+        }
+    }
+</script>
+</html>

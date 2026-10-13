@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <p>Insira dois números para somar:</p>
+    <input type="number" id="num1" placeholder="número 1">
+    <input type="number" id="num2" placeholder="número 2">
+    <p id="resultado"></p>
+    <button onclick="somar()">Somar</button>
+</body>
+<script>
+    function somar() {
+        var numero1 = parseFloat(document.getElementById("num1").value);
+        var numero2 = parseFloat(document.getElementById("num2").value);
+        var resultado = numero1 + numero2;
+        document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+    }
+</script>
+</html>
